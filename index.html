@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sabana Syed — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1724;
+      --muted:#9aa3b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071022);color:#e6eef6;}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:24px}
+
+    /* header */
+    .hero{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;margin-bottom:28px}
+    .avatar{width:140px;height:140px;border-radius:16px;overflow:hidden;border:4px solid rgba(110,231,183,0.12);background:linear-gradient(135deg,#123 10%,#445 60%);display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero h1{margin:0;font-size:28px;letter-spacing:-0.4px}
+    .hero p.role{margin:6px 0 0;color:var(--muted)}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+
+    /* left column */
+    .card{background:var(--card);border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .section{margin-bottom:18px}
+    h2.section-title{margin:0 0 12px;font-size:16px;color:var(--accent);}
+    p.lead{color:var(--muted);line-height:1.5}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .proj{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;border:1px solid rgba(110,231,183,0.06)}
+    .proj h3{margin:0 0 8px;font-size:15px}
+    .proj p{margin:0;color:var(--muted);font-size:13px}
+
+    /* right column */
+    .meta-list{display:flex;flex-direction:column;gap:10px}
+    .meta{display:flex;flex-direction:column}
+    .meta strong{font-size:13px;color:#cfeee0}
+    .meta span{color:var(--muted);font-size:13px}
+
+    .contact a{display:inline-block;margin-top:10px;background:linear-gradient(90deg,var(--accent),#3ad7ff);color:#07221a;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    footer{max-width:var(--maxw);margin:40px auto 80px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.hero{grid-template-columns:96px 1fr}.wrap{margin:18px;padding:16px}.avatar{width:96px;height:96px}}
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header class="hero">
+      <div class="avatar">
+        <!-- replace "avatar.jpg" with your uploaded image filename -->
+        <img src="avatar.jpg" alt="Sabana Syed">
+      </div>
+      <div>
+        <h1>SABANA SYED</h1>
+        <p class="role">Web Developer | Software Developer (Entry-Level)</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">sabanasyed25@gmail.com • <a href="https://www.linkedin.com/in/sabana-s-794a172a2/" target="_blank" style="color:var(--accent);text-decoration:none">LinkedIn</a> • <a href="https://github.com/Sabana025" target="_blank" style="color:var(--accent);text-decoration:none">GitHub</a></p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <div>
+        <section class="card section about">
+          <h2 class="section-title">Summary</h2>
+          <p class="lead">Passionate Web Developer skilled in creating responsive, user-centric interfaces using HTML5, CSS3, JavaScript, and WordPress. Focused on optimizing website performance, accessibility, and cross-platform compatibility. Dedicated to building scalable web solutions and continuously improving front-end development practices.</p>
+        </section>
+
+        <section class="card section">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects">
+            <div class="proj">
+              <h3>SmartShop — E-Commerce Web App</h3>
+              <p>Responsive e-commerce site using HTML, CSS, JavaScript with cart and localStorage persistence.</p>
+            </div>
+            <div class="proj">
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio showcasing projects, skills and contact details.</p>
+            </div>
+            <div class="proj">
+              <h3>Other Student Projects</h3>
+              <p>Small utilities and frontend apps built while learning React and vanilla JS.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React.js (learning)</div>
+            <div class="skill">SQL / MySQL</div>
+            <div class="skill">WordPress</div>
+            <div class="skill">Git & GitHub</div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card section">
+          <h2 class="section-title">Contact & Links</h2>
+          <div class="meta-list">
+            <div class="meta"><strong>Email</strong><span>sabanasyed25@gmail.com</span></div>
+            <div class="meta"><strong>Phone</strong><span>7418632505</span></div>
+            <div class="meta"><strong>LinkedIn</strong><span><a href="https://www.linkedin.com/in/sabana-s-794a172a2/" target="_blank" style="color:var(--accent);text-decoration:none">/in/sabana-s-794a172a2</a></span></div>
+            <div class="meta"><strong>GitHub</strong><span><a href="https://github.com/Sabana025" target="_blank" style="color:var(--accent);text-decoration:none">@Sabana025</a></span></div>
+          </div>
+          <div class="contact"><a href="mailto:sabanasyed25@gmail.com">Email Me</a></div>
+        </div>
+
+        <div class="card section">
+          <h2 class="section-title">Experience</h2>
+          <p class="lead"><strong>Startnet Ventures Pvt. Ltd — Web Developer Intern (WordPress)</strong><br>Jan 2025 – Apr 2025<br>Designed and managed responsive WordPress sites; customized themes and optimized layouts.</p>
+        </div>
+
+        <div class="card section">
+          <h2 class="section-title">Education</h2>
+          <p class="lead"><strong>Sri Shanmugha College of Engineering and Technology</strong><br>B.Tech — Information Technology (Nov 2022 – May 2026) • CGPA: 8.0</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <footer>Built from details in the uploaded resume. © 2025 Sabana Syed</footer>
+
+</body>
+</html>
